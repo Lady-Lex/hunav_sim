@@ -249,7 +249,7 @@ namespace hunav
     blackboard->set<double>("dt", 0.0);
 
     const std::string fname = _agent.behavior_tree != "" ? _agent.behavior_tree : yaml_base_name_ + "__agent_" + std::to_string(_agent.id) + "_bt.xml";
-    RCLCPP_ERROR(this->get_logger(), "Behavior tree file for agent %i: %s from %s", _agent.id, fname.c_str(), _agent.behavior_tree.c_str());
+    RCLCPP_INFO(this->get_logger(), "Behavior tree file for agent %i: %s", _agent.id, fname.c_str());
 
 
     std::string fullpath;
